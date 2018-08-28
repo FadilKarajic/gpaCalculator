@@ -1,0 +1,135 @@
+@navFont:'Ubuntu', sans-serif;
+@headingsFont:"Merriweather", serif;
+@paragraphFont:"Open Sans", sans-serif;
+@navBlue:#395fcc;
+@navLink:white;
+@navGreen:#4CAF50;
+@paragraphBack:#ddffff;
+
+.myMixins(){
+    border-radius: 35px 35px 35px 35px;
+}
+
+body {
+    background-color:#aeccc0;
+}
+.navContainer{
+    .topnav {
+        overflow: hidden;
+        background-color: @navBlue;
+        font-family: @navFont;
+        border-radius: 5px 5px 5px 5px;
+        margin-top:35px;
+    }
+    
+    .topnav a {
+        float: left;
+        display: block;
+        color: @navLink;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight:bold;
+        font-family: @navFont;
+        border-radius: 5px 5px 5px 5px;
+    }
+    
+    .topnav a:hover {
+        background-color:@navGreen;
+        color: black;
+    }
+    
+    .active {
+        background-color: @navGreen;
+        color: @navLink;
+        font-family: @navFont;
+    }
+    
+    .topnav .icon {
+        display: none;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .topnav a:not(:first-child) {display: none;}
+        .topnav a.icon {
+        float: right;
+        display: block;
+        }
+    }
+    
+    @media screen and (max-width: 600px) {
+        .topnav.responsive {position: relative;}
+        .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        }
+        .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+        }
+    }
+
+
+ 
+    
+    #logo img[src="images/logo.png"]{
+            margin-top:0px;
+            width:65px;
+            float:left;
+            border-radius:60%;
+        }
+    h2{
+        font-family:@headingsFont;
+        color:@navBlue;
+    }
+
+    table{
+        border: 10px solid rgb(178,0,68);
+        border-spacing: 15px;
+        text-align: center;
+        margin-top:25px;
+        margin-bottom:100px;
+        margin-left:auto;
+        margin-right:auto;
+    } 
+}
+
+.container{
+
+  button{
+    
+    background-color:#2196F3;  
+    font-size:12pt;
+    border-radius: 5px 5px 5px 5px;
+    border: 3px solid green;
+    margin-left:10px;
+    box-shadow: 10px 10px 10px 10px #79A9B2;
+    
+  }
+
+  input{
+    margin-left:20px;
+    margin-bottom:25px;
+    margin-top:10px;
+    border: 3px solid green;
+    border-radius: 5px 5px 5px 5px;
+    height:35px;
+    background-color:#2196F3;
+    box-shadow: 10px 10px 10px 10px #79A9B2;
+    }
+    .row{
+        background-color:@paragraphBack;
+        margin-top:25px;
+        box-shadow: 10px 10px 10px 10px #79A9B2;
+        
+    }
+    tr{
+        margin-top:20px;
+    }
+    
+}
+
+
